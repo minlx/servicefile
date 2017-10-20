@@ -1,0 +1,139 @@
+<div class="swiper-container container">
+    <div class="swiper-wrapper wrapper">
+        <div class="swiper-slide slide"><img src="Content/img/img_01.jpg"></div>
+        <div class="swiper-slide slide"><img src="Content/img/img_01.jpg"></div>
+        <div class="swiper-slide slide"><img src="Content/img/img_01.jpg"></div>
+    </div>
+    <div class="swiper-pagination pagination"></div>
+</div>
+<ul class="main-list">
+    <li><i class="iconfont">&#xe612;</i><em>车商城</em></li>
+    <li><i class="iconfont">&#xe699;</i><em>分期购车</em></li>
+    <li><i class="iconfont">&#xe6a1;</i><em>团购活动</em></li>
+    <li><i class="iconfont">&#xe709;</i><em>找二手车</em></li>
+</ul>
+<div class="advert"><img src="Content/img/img_02.jpg"></div>
+
+<div class="serviceTitle">
+    <h1 class="carhosr"><span>车主服务</span></h1>
+
+    <div class="seviceIcon">
+        <ul class="ulistOne">
+            <li><i class="iconfont">&#xe717;</i><em>油卡充值</em></li>
+            <li><i class="iconfont">&#xe67c;</i><em>低价保险</em></li>
+            <li><i class="iconfont">&#xe67d;</i><em>4S店保险</em></li>
+            <li><i class="iconfont">&#xe677;</i><em>品质轮胎</em></li>
+        </ul>
+        <ul class="ulistOne">
+            <li><i class="iconfont">&#xe720;</i><em>车品商城</em></li>
+            <li><i class="iconfont">&#xe700;</i><em>洗车</em></li>
+            <li><i class="iconfont">&#xe72e;</i><em>违章代缴</em></li>
+            <li><i class="iconfont">&#xe614;</i><em>免费测评</em></li>
+        </ul>
+        <ul class="ulistOne">
+            <li><i class="iconfont">&#xe6f2;</i><em>查周边</em></li>
+            <li><i class="iconfont">&#xe68b;</i><em>车主卡</em></li>
+            <li><i class="iconfont">&#xe724;</i><em>领券保养</em></li>
+            <li><i class="iconfont">&#xe649;</i><em>全部</em></li>
+        </ul>
+    </div>
+</div>
+
+<div class="titTwo">
+    <p class="flashSale">
+        <span class="titleSale">限时抢购</span>
+        <span class="saleTime">
+            <em class="hours">{{nTime|date:"HH"}}</em>
+            <b>:</b>
+            <em class="minutes">{{nTime|date:"mm"}}</em>
+            <b>:</b>
+            <em class="seconds">{{nTime|date:"ss"}}</em>
+        </span>
+    </p>
+
+    <div class="saleShop" id="saleScroll">
+        <ul class="everyScr">
+            <li class="everyShop">
+                <span><img src="Content/img/img_03.jpg"></span>
+                <span>补胎工具简易套装</span>
+                <span><em>￥9.9元</em><s>26元</s></span>
+                <span class="trigon"></span>
+                <span class="hotTit">热销</span>
+            </li>
+
+            <li class="everyShop glass">
+                <span><img src="Content/img/img_04.jpg"></span>
+                <span>车用椅背挂钩</span>
+                <span><em>￥9.9元</em><s>26元</s></span>
+                <span class="trigon"></span>
+                <span class="hotTit">热销</span>
+            </li>
+
+            <li class="everyShop">
+                <span><img src="Content/img/img_03.jpg"></span>
+                <span>补胎工具简易套装</span>
+                <span><em>￥9.9元</em><s>26元</s></span>
+                <span class="trigon"></span>
+                <span class="hotTit">热销</span>
+            </li>
+
+            <li class="everyShop glass">
+                <span><img src="Content/img/img_04.jpg"></span>
+                <span>车用椅背挂钩</span>
+                <span><em>￥9.9元</em><s>26元</s></span>
+                <span class="trigon"></span>
+                <span class="hotTit">热销</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="active">
+    <p class="actTit">
+        <span>活动专区</span>
+        <span></span>
+        <span>更多活动<i class="iconfont">&#xe6e1;</i></span>
+    </p>
+
+    <div class="actMain">
+        <p class="titImg">
+            <span><em>侧身价炫富</em></span>
+            <span><em>身价大PK</em></span>
+            <span><img src="Content/img/img_05.jpg"></span>
+        </p>
+
+        <p class="titImg">
+            <span><em>全场0利率</em></span>
+            <span><em>购车无压力</em></span>
+            <span><img src="Content/img/img_06.jpg"></span>
+        </p>
+
+        <p class="titImg lastImg">
+            <span><em>好车分期</em></span>
+            <span><em>定制专属方案</em></span>
+            <span><img src="Content/img/img_07.jpg"></span>
+        </p>
+    </div>
+</div>
+
+<div class="mainBox">
+    <div class="youLike" ng-repeat="item in items">
+        <p class="likeTit">
+            <span>{{item.titleBig}}</span>
+            <span></span>
+            <span>更多活动<i class="iconfont">&#xe6e1;</i></span>
+        </p>
+
+        <div class="carType">
+            <p class="cars" ng-repeat="brr in item.arr">
+                <span><img ng-src={{brr.img}}></span>
+                <span>{{brr.title}}</span>
+                <span>{{brr.des}}</span>
+                <span><em>{{brr.price}}</em><s>{{brr.originalPrice}}</s></span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="btn"><button type="button" class="loadBtn" ng-click="loadMore()">点击加载更多</button></div>
